@@ -1,0 +1,133 @@
+* {
+	-webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+}
+
+body,html{
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	overflow-x: hidden;
+}
+
+.food{
+	height: 100%;
+	overflow: scroll;
+
+	background-image: url('../images/myfav.jpg');
+	background-position: center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	opacity: 0.9;
+	filter: alpha(opacity=90);
+	filter:brightness(80%);
+	filter:contrast(90%);
+	filter:hue-rotate(0deg);
+
+}
+
+.rName{
+	font-family: 'Arizonia', cursive;
+	margin: 0;
+	padding: 0;
+	font-size: 7vw;
+	font-weight: bolder;
+	background: linear-gradient(to bottom, #ff9900 0%, #6600ff 100%);
+  	-webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: .5px #6e0830;
+	display: inline;
+	filter:brightness(120%);
+	filter:contrast(150%);
+}
+
+.menu{
+	position: absolute;
+	left: 27%;
+}
+
+.food figure{
+	padding: 0;
+	margin: 0;
+	margin-top: 9.5%;
+	width: 100000%;
+}
+
+.food::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+
+.foodItem{
+	position: relative;
+	float: left;
+	height: 488px;
+	width: 440.54px;
+	background-color: #2F2F31;
+	padding-left: 6.5px;
+	padding-right: 6.5px;
+	padding-bottom: 19.5px;
+	padding-top: 6.5px;
+	top: 4%;
+	border-radius: 5px;
+	margin-left: 6px;
+	display: inline-block;
+}
+
+.foodItem img{
+	height: 65%;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	border-radius: 4px;
+}
+
+.fn{
+	padding: 0;
+	margin-top: 1%;
+	margin-bottom: 0;
+	font-family: 'Pacifico', cursive;
+}
+
+.cat{
+	margin-top: 1%;
+	margin-bottom: 0;
+	font-family: 'Pacifico', cursive;
+	padding: 0;
+	font-size: 1.1vw;
+}
+
+.rtnm{
+	margin-top: 1%;
+	margin-bottom: 0;
+	font-family: 'Pacifico', cursive;
+	padding: 0;
+	font-size: 1.1vw;
+}
+
+.prc{
+	margin-top: 0;
+	margin-bottom: 0;
+	font-family: 'Pacifico', cursive;
+	padding: 0;
+	font-size: 1.1vw;
+}
+
+.rtng{
+	margin-top: 1%;
+	margin-bottom: 0;
+	font-family: 'Pacifico', cursive;
+	padding: 0;
+	font-size: 1.1vw;
+}
+
+.so{
+	float: right;
+
+}

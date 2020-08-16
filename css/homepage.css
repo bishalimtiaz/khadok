@@ -1,0 +1,236 @@
+* {
+	-webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body,html{
+	height: 100%;
+	margin: 0;
+	background-color: #e5e5e5;
+}
+
+
+
+#opn{
+	color: black;
+	cursor: pointer;
+	font-size: 2.3vw;
+	font-weight: bolder;
+}
+
+/*#main{
+	transition: margin-left .5s;
+	padding: 16px;
+}*/
+
+/* end of side nav*/
+
+.parallax{
+	background-image: url('../images/backParalaax.jpg');
+	height: 100%;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	opacity: 0.7;
+	filter: alpha(opacity=70);
+
+}
+
+.logo{
+	margin: auto;
+	width: auto;
+	height: auto;
+	background-color: transparent;
+	position: relative;
+	top: 30%;
+}
+
+.logo h1,h2{
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	font-family: 'Pacifico', cursive;
+	color: #f3e0a9;
+	text-shadow: 4px 4px 5px #4c4c4c,4px 4px 5px #bd5e1b;
+
+}
+
+.logo h1{
+	margin-left: -25%;
+	font-size: 4vw;
+}
+
+.logo h2{
+	
+	font-size: 3vw;
+	margin-left: 4%;
+}
+
+#navbar{
+	position: absolute;
+	background: linear-gradient(to bottom, #d08181 0%, #ffff66 100%);
+	height:9%;
+	left: 10%;
+	right: 10%;
+	top: 75%;
+	border-radius: 25px;
+	box-shadow: -10px -8px 10px #533333;
+}
+
+#navbar a{
+	text-decoration: none;
+	display: inline-block;
+	font-size: 2vw;
+	margin-top: 1%;
+	text-align: center;
+	font-family: 'Pacifico', cursive;
+	float: left;
+	padding-left: 2%;
+	padding-right: 2%;
+	border-radius: 4px;
+	color: #635e69;
+
+}
+
+#navbar a:first-child{
+	margin-left: 6%;
+}
+
+#navbar a:nth-child(2){
+	margin-left: 5%;
+}
+#navbar a:nth-child(3){
+	margin-left: 5%;
+}
+
+#navbar input{
+	display: inline-flex;
+	width: 30%;
+	margin-left: 34%;
+	margin-top: 0.6%;
+	height:75%;
+	border-radius: 25px;
+	background-color: white;
+	background-image: url('../images/Search.png');
+	background-repeat: no-repeat;
+	background-position: 1% 0.4vw;
+	padding-left: 4%;
+	background-color: #d2ced7;
+	border: 1px solid #4b1e1e;
+}
+
+.sticky {
+  position: fixed !important;
+  top: 0 !important;
+  background-color: red;
+}
+
+/*main contents*/
+
+.maicontent{
+	height: 100%;
+	margin-top: 2%;
+}
+
+/*parent maincontent*/
+.resturant{
+	width: 30%;
+	float: left;
+}
+
+/*parent maincontent*/
+.food{
+	width: 40%;
+	float: left;
+	padding: 1%;
+	height: auto;
+	background-color:#e5e5e5;
+}
+
+/*parent maincontent*/
+.offers{
+	width: 30%;
+	float: left;
+}
+
+/*parent resturant food and offers*/
+
+.contentHeading{
+	text-align: center;
+	font-size: 2vw;
+	font-family: 'Pacifico', cursive;
+}
+
+/*parent food*/
+
+.foodContent{
+	margin-top:2%; 
+	background-color: #C1B599;
+	height: 30%;
+	width: 100%;
+	border-radius: 4px;
+
+}
+
+/*parent foodContent*/
+
+.foodContentImage{
+	width:35%;
+	height: 164px;
+	float: left;
+	margin-right: 3%;
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+}
+
+/*parent foodContentImg*/
+
+.foodContentImage img{
+	width:100%;
+	height: 100%;
+	border-top-left-radius: 4px;
+	border-bottom-left-radius: 4px;
+}
+
+/*parent foodContent*/
+
+.foodContentName{
+	flex-flow: left;
+	font-family: 'Pacifico', cursive;
+	font-size: 1.5vw;
+	background: linear-gradient(to bottom, #ffc04c 0%, #c1b599 100%);
+}
+
+.foodContentResturant,.foodContentPrice{
+	font-family: 'Pacifico', cursive;
+	font-size: 1.5vw;
+}
+
+.checked {
+    color: yellow;
+}
+
+.giveRate,.foodContentRating{
+	margin-top: 2%;
+}
+
+footer{
+	clear: both;
+	width: 100%;
+	height: 10%;
+	background-color: #4d4d4d;
+	text-align: center;
+	margin-top: 10%;
+}
+
+footer h2{
+	top: 20%;
+	position: relative;
+}
+
+
+
+
+

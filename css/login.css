@@ -1,0 +1,431 @@
+* {
+	-webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body,html{
+	height: 100%;
+	margin: 0;
+}
+
+.parallax{
+	background-image: url('../images/desert.jpg');
+	height: 100%;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	opacity: 0.8;
+	filter: alpha(opacity=80);
+	
+
+}
+
+/*for welcome to Khadok*/
+.logo h1{
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	font-family: 'Pacifico', cursive;
+	font-size: 4vw;
+	color: #eedcb9;
+	text-shadow: 4px 4px 5px #191919,4px 4px 5px yellow;
+}
+
+/*logo div containing welcome message*/
+
+.logo{
+	margin: auto;
+	width: auto;
+	height: auto;
+	background-color: transparent;
+	position: relative;
+	top: 40%;
+	color: gray;
+}
+
+/*scroll down*/
+
+.circle{
+	position: absolute;
+	top: 75%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	border: 2px solid #fff;
+	border-radius: 50%;
+	width: 100px;
+	height: 100px;
+	text-align: center;
+	line-height: 110px;
+	font-size: 80px;
+	overflow: hidden;
+}
+
+.circle .fa{
+	color: #fff;
+	margin: 0;
+	padding: 0;
+	animation: animate 1s linear infinite;
+}
+
+/*for scroll down animation*/
+
+@keyframes animate
+{
+	0%
+	{
+		transform: translateY(-50px);
+		text-shadow: 0 50px 0 #fff;
+	}
+
+	20%
+	{
+		transform: translateY(0px);
+		text-shadow: 0 10px 0 #fff;
+	}
+
+	40%
+	{
+		transform: translateY(0px);
+		text-shadow: 0 -10px 0 #fff;
+	}
+
+	60%
+	{
+		transform: translateY(0px);
+		text-shadow: 0 0px 0 #fff;
+	}
+
+	100%
+	{
+		transform: translateY(100px);
+		text-shadow: 0 -50px 0 #fff;
+	}
+
+}
+
+/*second Background*/
+
+.backgroud{
+
+	background-image: url('../images/dark_resturant.jpg');
+	height: 100%;
+	display: block;
+	background-size: cover;
+	opacity: 0.8;
+	filter: alpha(opacity=80);
+
+}
+
+/*login and sign up button */
+
+.btn{
+	margin-top:0;
+	margin-left: 2%;
+}
+
+.btn:first-child{
+	padding-top: 5%;
+}
+
+.btn:nth-child(2){
+	padding-top: 2%;
+}
+
+.btn:nth-child(3){
+	margin-top: -10%;
+	margin-left: 85%;
+
+}
+
+.btn button{
+ 	text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    padding: 1vh 1vw 1vh 1vw;
+    font-size: 2vw;
+    font-weight: bolder;
+    border: 2px solid #3f1f09;
+    border-radius: 8px;
+    background-color: #c0c0c0;
+    color: #131313;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    box-shadow: 4px 4px 5px white;
+    outline: none;
+
+}
+
+.btn button:hover{
+	background-color:#737373 ;
+	color: #f2f2f2;
+	box-shadow: none;
+
+}
+
+/*div containing login form*/
+
+.login{
+	position: relative;
+	top: -15%;
+	background: linear-gradient(to bottom, #9b885d 0%, #f2eee3 100%);
+	margin-left: 25%;
+	margin-right: 25%;
+	padding-bottom: 4%;
+	border-radius: 5px;
+	display: none;
+	-webkit-transition: 0.5s;
+
+}
+
+/*for both login and signup divclose containing close button*/
+
+.divclose{
+	position: absolute;
+	top: 0;
+	right: 2%;
+}
+
+/*close button*/
+
+.closebtn{
+	text-decoration: none;
+	color: black;
+	font-size: 2.5vw;
+	font-weight: bold;
+	display: block;
+	transition: 0.3s;
+}
+
+.login #l1{
+	position: absolute;	
+	font-size: 2vw;
+	color: #3f1f09;
+	text-shadow: 3px 3px 5px #f1d2bb;
+	font-weight: bolder;
+	top: 20%;
+	left: 38%;
+
+}
+
+.login #l2,#l4{
+
+	font-size: 1.5vw;
+	font-weight: bolder;
+	color: #3f1f09;
+	text-shadow: 3px 3px 5px #737373;
+}
+
+.login #l2,#l3,#l4,#l5,#l6,#l7{
+	margin-top: 2%;
+	margin-left: 2%;
+	margin-right: 2%;
+}
+
+.login #l6{
+	margin-top: 3%;
+	margin-left: 2%;
+	margin-right: 2%;
+}
+
+
+.login input[type="text"],input[type="password"]{
+	width: 100%;
+	text-decoration: none;
+	padding: 1.2%;
+	border: 3px solid #555;
+	border-radius: 25px;
+	outline: none;
+
+
+}
+
+.login input[type="button"]{
+	
+	font-size: 1.6vw;
+	margin-left: 42%;
+	border-radius: 5px;
+	padding-left: 4%;
+	padding-right: 4%;
+	background-color: #5d5137;
+    color: #faf0e8;
+	outline: none;
+	font-weight: bolder;
+
+}
+
+.login input[type="button"]:hover{
+	background-color: #9b885d;
+	color: #251205;
+	border: 2px solid #4d442e;
+}
+
+.login #l7 a:hover{
+	color: #1919ff;
+}
+
+/*for both login and sign up icon*/
+
+.icon{
+	width: 20%;
+	height: 20%;
+	border-radius: 50%;
+	position: relative;
+	left: calc(44% - 44px);
+	top: -70px;
+	/*
+	
+	*/
+}
+
+.signup{
+	position: relative;
+	top: -15%;
+	background: linear-gradient(to bottom, #9b885d 0%, #f2eee3 100%);
+	margin-left: 25%;
+	margin-right: 25%;
+	padding-bottom: 2%;
+	border-radius: 5px;
+	-webkit-transition: 0.5s;
+	display: none;
+}
+
+.signup #s1{
+	position: absolute;
+	font-size: 2vw;
+	color: #3f1f09;
+	text-shadow: 3px 3px 5px #f1d2bb;
+	font-weight: bolder;
+	left: 38%;
+	top: 15%;
+}
+
+.firstfield{
+	border: none;
+	margin-bottom: 0;
+	display: block;
+	padding-bottom: 0;
+}
+
+.secondfield{
+	border: none;
+	margin-bottom: 0;
+	display: none;
+	padding-bottom: 0;
+
+}
+
+.signup #s2,#s4,#s6,#s8,#s11,#s13,#s15,#s18{
+	font-size: 1.5vw;
+	font-weight: bolder;
+	color: #3f1f09;
+	text-shadow: 3px 3px 5px #f1d2bb;
+}
+
+.signup #s19{
+
+	font-size: 1.5vw;
+	font-weight: bolder;
+	color:black;
+}
+
+.signup #s3,#s4,#s5,#s6,#s7,#s8,#s9,#s12,#s13,#s15,#s14,#s16,#s18,#s19{
+	margin-top: 1.5%;
+	margin-left: 2%;
+	margin-right: 2%;
+}
+.signup #s2,#s11{
+	margin-top: 0;
+	margin-left: 2%;
+	margin-right: 2%;
+}
+
+.signup #s10{
+	margin-top: 3.5%;
+	margin-left: 2%;
+	margin-right: 2%;
+
+}
+
+.signup #s17{
+	margin-top: 4.5%;
+	margin-left: 2%;
+	margin-right: 2%;
+}
+
+.signup input[type="text"],input[type="password"],input[type="date"],input[type="email"]{
+	width: 100%;
+	text-decoration: none;
+	padding: 1.2%;
+	border: 3px solid #555;
+	border-radius: 25px;
+	outline: none;
+
+
+}
+
+.firstfield input[type="button"]{
+	
+	font-size: 1.6vw;
+	margin-left: 90%;
+	border-radius: 5px;
+	background-color: #5d5137;
+    color: #faf0e8;
+	outline: none;
+	font-weight: bolder;
+
+}
+
+.firstfield input[type="button"]:hover{
+	background-color:#737373 ;
+	color: #f2f2f2;
+	box-shadow: none;
+
+}
+
+
+#btt2{
+	font-size: 1.6vw;
+	margin-left: 86%;
+	border-radius: 5px;
+	background-color: #5d5137;
+    color: #faf0e8;
+	outline: none;
+	font-weight: bolder;
+}
+
+
+
+#btt2:hover{
+	background-color:#737373 ;
+	color: #f2f2f2;
+	box-shadow: none;
+
+}
+
+.secondfield input[type="radio"]{
+	height: 15px;
+	width: 15px;
+}
+
+
+
+
+/*.secondfield input[type="submit"]{
+	font-size: 1.6vw;
+	margin-left: 4%;
+	border-radius: 5px;
+	background-color: #5d5137;
+    color: #faf0e8;
+	outline: none;
+	font-weight: bolder;
+
+}
+
+.secondfield input[type="submit"]:hover{
+	background-color:#737373 ;
+	color: #f2f2f2;
+	box-shadow: none;
+
+}*/

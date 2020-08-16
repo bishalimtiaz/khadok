@@ -1,0 +1,858 @@
+* {
+	-webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+}
+
+body,html{
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	overflow-x: hidden;
+}
+
+
+.parallax{
+
+	height: 100%;
+	background-image: url('../images/beverages-brunch-cocktail-5317.jpg');
+	background-position: center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+    opacity: 0.9;
+	filter: alpha(opacity=90);
+	filter:brightness(80%);
+	filter:contrast(90%);
+	filter:hue-rotate(0deg);
+}
+
+.logo{
+	position: absolute;
+	top: 20%;
+	text-align: center;
+	width: 100%;
+	
+}
+
+.rName{
+	font-family: 'Arizonia', cursive;
+	margin: 0;
+	padding: 0;
+	font-size: 7vw;
+	font-weight: bolder;
+	background: linear-gradient(to bottom, #ff9900 0%, #6600ff 100%);
+  	-webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: .5px #660033;
+	display: inline;
+	filter:brightness(120%);
+	filter:contrast(150%);
+}
+
+.oName{
+	font-family: 'Arizonia', cursive;
+	margin: 0;
+	padding: 0;
+	font-size: 7vw;
+	font-weight: bolder;
+	background: linear-gradient(to bottom, #ff9900 0%, #6600ff 100%);
+  	-webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: .5px #660033;
+	display: inline;
+	filter:brightness(140%);
+	filter:contrast(150%);
+
+}
+
+
+.menu{
+	position: absolute;
+	left: 40%;
+}
+
+.ofr{
+	position: absolute;
+	left: 40%;
+}
+
+.nav{
+	position: absolute;
+	top: 70%;
+	width: 100%;
+}
+
+#nav1,#nav2,#nav3{
+	font-family: 'Pacifico', cursive;
+
+	font-size: 2.4vw;
+	border-radius: 50px;
+	background-color: transparent;
+	padding-left: 3%;
+	padding-right: 3%;
+	border: 3px solid silver;
+	font-weight: bold;
+
+}
+
+#nav1:hover,#nav2:hover,#nav3:hover{
+	background-color: white;
+	color:purple;
+	border-color: orange;
+
+}
+
+#nav1{
+	margin-left: 10%;
+}
+
+#nav2{
+	margin-left: 20%;
+}
+
+#nav3{
+	margin-left: 20%;
+}
+
+.dropdown{
+	position: relative;
+	left: 83%;
+	top: 8%;
+	display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: transparent;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border: 3px solid orange;
+    border-bottom-right-radius: 50px;
+    border-top-left-radius: 50px;
+    left: -20px;
+
+}
+
+.dropdown-content p {
+	font-family: 'Courgette', cursive;
+    color: black;
+    font-size: 1.1vw;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-weight: bold;
+    background-color: transparent;
+    margin: 0;
+}
+
+.dropdown-content p:first-child {
+	border-top-left-radius: 50px;
+}
+
+.dropdown-content p:last-child {
+	border-bottom-right-radius: 50px;;
+}
+
+.dropdown-content p:hover {
+	background-color: white;
+	color: purple;
+}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+#nav4{
+	
+	font-family: 'Pacifico', cursive;
+	font-size: 2.4vw;
+	border-radius: 50px;
+	background-color: transparent;
+	padding-left: 45px;
+	padding-right: 45px;
+	border: 3px solid silver;
+	font-weight: bold;
+	display: block;
+}
+
+#nav4:hover{
+	background-color: white;
+	color:purple;
+	border-color: orange;
+}
+
+.food{
+	height: 100%;
+	overflow: scroll;
+
+	background-image: url('../images/food-photography-tips-photojaanic-19.jpg');
+	background-position: center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	opacity: 0.9;
+	filter: alpha(opacity=90);
+	filter:brightness(80%);
+	filter:contrast(90%);
+	filter:hue-rotate(0deg);
+
+	/*Bread-with-topping-2yafkcqgoqrfa6gmqd4su8*/
+}
+
+.offer{
+
+	height: 100%;
+	overflow: scroll;
+
+	background-image: url('../images/Bread-with-topping-2yafkcqgoqrfa6gmqd4su8.jpg');
+	background-position: center;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	opacity: 0.9;
+	filter: alpha(opacity=90);
+	filter:brightness(80%);
+	filter:contrast(80%);
+	filter:hue-rotate(0deg);
+}
+
+.food figure{
+	padding: 0;
+	margin: 0;
+	margin-top: 10%;
+	width: 100000%;
+}
+
+.offer figure{
+	padding: 0;
+	margin: 0;
+	margin-top: 10%;
+	width: 100000%;
+}
+
+.food::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+
+.offer::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+/* optional: show position indicator in red */
+
+
+.foodItem{
+	position: relative;
+	float: left;
+	height: 480px;
+	width: 440.54px;
+	background-color: #2F2F31;
+	padding-left: 6.5px;
+	padding-right: 6.5px;
+	padding-bottom: 19.5px;
+	padding-top: 6.5px;
+	top: 4%;
+	border-radius: 5px;
+	margin-left: 6px;
+	display: inline-block;
+}
+
+.offerItem{
+	position: relative;
+	float: left;
+	height: 480px;
+	width: 440.54px;
+	background-color: #2F2F31;
+	padding-left: 6.5px;
+	padding-right: 6.5px;
+	padding-bottom: 19.5px;
+	padding-top: 6.5px;
+	top: 4%;
+	border-radius: 5px;
+	margin-left: 6px;
+	/*overflow: hidden;*/
+	display: inline-block;
+
+}
+
+.foodItem img{
+	height: 68%;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	border-radius: 4px;
+}
+
+.offerItem img{
+	height: 68%;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	border-radius: 4px;
+}
+
+/*.foodItem img:hover{
+	filter:contrast(20%);
+	transition: .2s;
+}*/
+
+/**/
+
+.fn{
+	padding: 0;
+	margin-top: 1%;
+	margin-bottom: 0;
+	font-family: 'Pacifico', cursive;
+}
+
+.on{
+	padding: 0;
+	margin-top: 1%;
+	margin-bottom: 0;
+	margin-bottom: 0;
+	font-weight: bolder;
+	font-family: 'Acme', sans-serif;
+}
+
+
+
+.cat{
+	margin-top: 1%;
+	margin-bottom: 0;
+	font-family: 'Pacifico', cursive;
+	padding: 0;
+	font-size: 1.2vw;
+}
+
+.oat{
+	font-size: 1.2vw;
+	color: white;
+	font-weight: bold;
+	font-family: serif;
+}
+
+
+
+.ov{
+	margin-top: 2%;
+	margin-bottom: 0;
+	padding-left: 1%;
+	padding-right: 1%;
+	height: 123px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+.ov::-webkit-scrollbar {
+    width: 0.4em;
+}
+ 
+.ov::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 50px rgba(0,0,0,0.3);
+}
+ 
+.ov::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+
+.on .fa-trash-alt{
+	margin-left: 11%;
+	display: none;
+}
+
+.prc{
+	margin-top: 0;
+	margin-bottom: 0;
+	font-family: 'Pacifico', cursive;
+	padding: 0;
+	font-size: 1.2vw;
+}
+
+.rtng{
+	margin-top: 1%;
+	margin-bottom: 0;
+	font-family: 'Pacifico', cursive;
+	padding: 0;
+	font-size: 1.2vw;
+}
+
+.so{
+	float: right;
+
+}
+.rtv{
+	margin-top: 1%;
+	margin-bottom: 0;
+	font-family: 'Pacifico', cursive;
+	padding: 0;
+	font-size: 1.2vw;
+}
+
+
+
+
+.fa-heart{
+	position: absolute;
+	top: 31%;
+	left: 41%;
+	color: silver;
+	
+}
+
+
+/*For form*/
+
+.addResturant{
+	position: relative;
+	width: 60%;
+	left: 20%;
+	top: 20% !important;
+	padding: 0;
+	border-radius: 5px;
+	display: block;
+	background: linear-gradient(to bottom right, #b2b200 0%, #ffff66 100%);
+	display: none;
+	
+}
+
+
+.divclose{
+	position: absolute;
+	top: 0;
+	right: 2%;
+	width: auto;
+}
+
+
+.closebtn{
+	text-decoration: none;
+	color: black;
+	font-size: 2.5vw;
+	font-weight: bold;
+	display: block;
+	transition: 0.3s;
+}
+
+.icon{
+	width: 18%;
+	height: 18%;
+	border-radius: 50%;
+	position: relative;
+	left: calc(44% - 44px);
+	top: -80px;
+	background: linear-gradient(to bottom, #b2b200 0%, #ffff66 100%);
+	box-shadow: 5px 5px 10px #4C4C00;
+}
+
+.firstField{
+	border: none;
+	margin-bottom: 0;
+	display: none;
+	padding: 0;
+	height: auto;
+	margin: 0;
+	margin-top: -2%;
+	border-radius: 5px;
+	margin-top: 2%;
+}
+
+
+/*.secondfield{
+	display: none;
+}*/
+
+/*.thirdfield{
+	display: none;
+}*/
+
+.firstField #ff2,#ff4{
+	font-size: 1.6vw;
+	font-weight: bolder;
+	color: #3f1f09;
+	text-shadow: 3px 3px 5px #f1d2bb;
+}
+
+.firstField #ff3,#ff4,#ff5{
+	margin-top: 1.5%;
+	margin-left: 2%;
+	margin-right: 2%;
+}
+
+.firstField #ff2{
+	margin-top: 0;
+	margin-left: 2%;
+	margin-right: 2%;
+}
+
+
+.firstField input[type="text"],input[type="password"]{
+	width: 100%;
+	text-decoration: none;
+	padding: 1.2% !important;
+	border: 3px solid #555;
+	border-radius: 25px;
+	outline: none;
+}
+
+.firstField input[type="button"]{
+	
+	font-size: 1.6vw;
+	margin-left: 90%;
+	border-radius: 5px;
+	background-color: #5d5137;
+    color: #faf0e8;
+	outline: none;
+	font-weight: bolder;
+
+}
+
+.firstField #ff6{
+	margin-top: 3.5%;
+	margin-left: 2%;
+	margin-right: 2%;
+	margin-bottom: 1.5%;
+
+}
+
+
+.firstField input[type="button"]:hover{
+	background-color:#737373 ;
+	color: #f2f2f2;
+	box-shadow: none;
+
+}
+
+.fourthfield{
+
+	border: none;
+	margin-bottom: 0;
+	display: none;
+	padding: 0;
+	height: auto;
+	margin: 0;
+	margin-top: -9%;
+}
+
+
+.fourthfield #frf4,#frf6,#frf11{
+	font-size: 1.2vw;
+	font-weight: bolder;
+	color: #3f1f09;
+	text-shadow: 3px 3px 5px #f1d2bb;
+}
+
+
+.fourthfield #frflogo,#frf10,#frf4,#frf5,#frf6,#frf7,#frf11,#frf12{
+	margin-top: 1%;
+	margin-left: 2%;
+	margin-right: 2%;
+}
+
+
+.fourthfield input[type="text"],input[type="password"]{
+	width: 100%;
+	text-decoration: none;
+	padding: 0.6%;
+	border: 3px solid #555;
+	border-radius: 25px;
+	outline: none;
+}
+
+.fourthfield #frf8{
+	margin-top: 2.5%;
+	margin-left: 2%;
+	margin-right: 2%;
+	margin-bottom: 0.7%;
+}
+
+.fourthfield input[type="button"]{
+	font-size: 1.4vw;
+	border-radius: 5px;
+	background-color: #5d5137;
+    color: #faf0e8;
+	outline: none;
+	font-weight: bolder;
+}
+
+.fourthfield input[type="button"]:hover{
+	background-color:#737373 ;
+	color: #f2f2f2;
+	box-shadow: none;
+
+}
+
+.fourthfield input[type="file"]{
+	display: none;
+}
+
+#frf9{
+	margin-left: 92%;
+}
+
+#frflogo img{
+	width: 100%;
+	height: 100%;
+	object-fit: fill;
+}
+
+
+
+#frflogo{
+	width: 145px;
+	height: 135px;
+	margin-left: 38% !important;
+	margin-top: 1% !important;
+
+}
+
+#frf2{
+	text-align: center;
+	padding-top: 0;
+	margin-top: 0;
+}
+
+.fourthfield label{
+	position: relative;
+    padding: 0.5%;
+    padding-top: 0.3%;
+    padding-bottom: 0.3%;
+    background: #855439; 
+    display: table;
+    color: #fff;
+    left: 38%;
+    top: 0;
+    font-size: 1vw;
+}
+
+
+.secondfield{
+	border: none;
+	margin-bottom: 0;
+	display: none;
+	padding: 0;
+	height: auto;
+	margin: 0;
+	margin-top: -9%;
+	border-radius: 5px;
+}
+
+
+
+.secondfield #sflogo,#sf10,#sf5{
+	margin-top: 1.5%;
+	margin-left: 2%;
+	margin-right: 2%;
+}
+
+
+
+textarea{
+	width: 100%;
+	height: 110px;
+	border-radius: 25px;
+	padding: 0.9%;
+	outline: none;
+	margin-top: 2%;
+}
+
+.secondfield #sf8{
+
+	margin-top: 2.5%;
+	margin-left: 2%;
+	margin-right: 2%;
+	margin-bottom: 0.7%;
+	text-decoration: none;
+
+}
+
+.secondfield input[type="button"]{
+	font-size: 1.4vw;
+	border-radius: 5px;
+	background-color: #5d5137;
+    color: #faf0e8;
+	outline: none;
+	font-weight: bolder;
+	/*float: left;*/
+}
+
+.secondfield input[type="button"]:hover{
+	background-color:#737373 ;
+	color: #f2f2f2;
+	box-shadow: none;
+
+}
+
+.secondfield input[type="file"]{
+	display: none;
+}
+
+#sf9{
+	margin-left: 92%;
+}
+
+#tf9{
+	margin-left: 88%;
+}
+
+#sflogo img{
+	width: 100%;
+	height: 100%;
+	object-fit: fill;
+
+}
+
+#sflogo{
+	width: 147px;
+	height: 135px;
+	margin-left: 40% !important;
+}
+
+#sf2{
+	text-align: center;
+	padding-top: 0;
+	margin-top: 0;
+}
+
+
+.secondfield label{
+	position: relative;
+    padding: 0.5%;
+    padding-top: 0.2%;
+    padding-bottom: 0.2%;
+    background: #855439; 
+    display: table;
+    color: #fff;
+    left: 41%;
+    top: 0;
+    font-size: 1.3vw;
+}
+
+
+.thirdfield{
+
+	border: none;
+	margin-bottom: 0;
+	display: none;
+	padding: 0;
+	height: auto;
+	margin: 0;
+	margin-top: 0;
+	background-color: transparent;
+}
+
+.thirdfield #tf2,#tf4,#tf6{
+	font-size: 1.6vw;
+	font-weight: bolder;
+	color: #3f1f09;
+	text-shadow: 3px 3px 5px #f1d2bb;
+}
+
+.thirdfield #tf3,#tf4,#tf5,#tf6,#tf7{
+	margin-top: 1.5%;
+	margin-left: 2%;
+	margin-right: 2%;
+}
+
+.thirdfield #tf2{
+	margin-top: 0;
+	margin-left: 2%;
+	margin-right: 2%;
+}
+
+
+.thirdfield input[type="password"]{
+	width: 100%;
+	text-decoration: none;
+	padding: 1.2% !important;
+	border: 3px solid #555;
+	border-radius: 25px;
+	outline: none;
+}
+
+.thirdfield input[type="button"]{
+	
+	font-size: 1.6vw;
+	margin-left: 80%;
+	border-radius: 5px;
+	background-color: #5d5137;
+    color: #faf0e8;
+	outline: none;
+	font-weight: bolder;
+
+}
+
+.thirdfield #tf8{
+	margin-top: 3.5%;
+	margin-left: 2%;
+	margin-right: 2%;
+	margin-bottom: 1.5%;
+
+}
+
+
+
+
+.thirdfield input[type="button"]:hover{
+	background-color:#737373 ;
+	color: #f2f2f2;
+	box-shadow: none;
+
+}
+
+
+
+/*rating*/
+.rating{
+	border:none;
+	float: left;
+	margin:0;
+	padding: 0;
+	display: none;
+}
+
+.rating > input{
+	display: none;
+}
+.rating > label{
+	margin:0;
+	padding: 0;
+}
+
+.rating > label::before{
+	margin: 5px;
+	font-stretch: 1,25em;
+	font-family: FontAwesome;
+	display: inline-block;
+	content: "\f005";
+}
+
+.rating > .half::before{
+	content: "\f089";
+	position: absolute;
+}
+
+.rating > label{
+	color: #ddd;
+	float: right;
+}
+
+
+.rating > input:checked ~ label,
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label{
+	color: #FFD700;
+}
+
+.rating > input:checked + label:hover,
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label,
+.rating > input:checked ~ label:hover ~ label{
+	color: #FFED85;
+}
