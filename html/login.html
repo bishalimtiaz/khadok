@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Khadok</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="../css/login.css">
+	<link rel="stylesheet" type="text/css" href="../css/fontawesome/fontawesome-all.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/animate.css">
+	<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+</head>
+<body>
+	<div class="parallax">
+
+		<div class="logo">
+			<h1>Welcome To Khadok</h1>
+			
+		</div>
+
+		<div class="circle" onclick="initScroll('bg'); return false;">
+			<i class="fa fa-angle-down"></i>
+			
+		</div>
+		
+	</div>
+	<!--end of first background including down scroll-->
+
+	<div class="backgroud" id="bg">
+		<div class="btn" onclick="openForm('login-frm');"><button>Login</button></div>
+		<div class="btn" onclick="openForm('Sign-frm');"><button>Sign Up</button></div>
+		<div class="btn" onclick="go();" style="position: absolute;"><button>Admin</button></div>
+
+
+		<input type="text" name="hide" id="hdn" style="display: none;">
+
+		<!--<div class="login-frm">
+
+
+		
+		</div>-->
+		<div id="login-frm" class="login">
+			<img src="../images/icon.png" class="icon bounceIn animated">
+			<div  class="divclose"><a href="javascript:void(0)" class="closebtn" onclick="closeNav('login-frm')">&times;</a></div>
+			<div id="l1">Login Here</div>
+			<form name="loginForm">
+				<div id="l2">Username</div>
+				<div id="l3"><input type="text" name="username" placeholder="username"></div>
+				<div id="l4">Password</div>
+				<div id="l5"><input type="password" name="password" placeholder="password"></div>
+				<div id="l6"><input type="button" name="" value="Login" onclick="login()"></div>
+			</form>
+
+			<div id="l7"><a href="#">Forgot pasword?</a><br></div>
+		</div>
+
+		<!--end of login form-->
+
+		<div id="Sign-frm" class="signup">
+			<img src="../images/icon.png" class="icon bounceIn animated">
+			<div  class="divclose"><a href="javascript:void(0)" class="closebtn" onclick="closeNav('Sign-frm')">&times;</a></div>
+			<div id="s1">Sign UP Here</div>
+
+			<form name="signForm" >
+				<fieldset id="ff" class="firstfield">
+					<div id="s2">Full Name</div>
+					<div id="s3"><input type="text" name="fullname" placeholder="Full Name"></div>
+					<div id="s4">Username</div>
+					<div id="s5"><input type="text" name="username" placeholder="username"></div>
+					<div id="s6">Password</div>
+					<div id="s7"><input type="password" name="password" placeholder="password"></div>
+					<div id="s8">Confirm Password</div>
+					<div id="s9"><input type="password" name="confirmPassword" placeholder="Confirm password"></div>
+					<div id="s10"><input type="button" name="" value="Next" onclick="next('ff')"></div>
+					
+				</fieldset>
+
+
+				<fieldset id="sf" class="secondfield">
+					<div id="s11">Email</div>
+					<div id="s12"><input type="email" name="email" placeholder="Eamil"></div>
+					<div id="s13">Hometown</div>
+					<div id="s14"><input type="text" name="hometown" placeholder="Hometown"></div>
+					<div id="s15">Birthday</div>
+					<div id="s16"><input type="date" name="bday" placeholder="Birthday"></div>
+					<div id="s18">Gender:</div>
+					<div id="s19">
+						<input type="radio" name="gender" value="male" required> Male
+						<input type="radio" name="gender" value="female" required> Female
+					</div>
+					<div id="s17">
+						<input id="btt2" type="button" name="" value="Sign Up" onclick="signuUp()">
+					</div>
+					
+				</fieldset>
+			</form>
+			
+		</div>
+
+	</div>
+
+
+
+	<!--jaascript here -->
+
+	<script type="text/javascript">
+
+		var marginY=0;
+		var destination=0;
+		var speed=15;
+		var scroller=null;
+		//var login,sign;
+
+
+		var xhttp;
+
+		if (window.XMLHttpRequest) {
+
+			xhttp = new XMLHttpRequest();
+		} 
+
+		 else {
+			    
+		    xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+		}
+
+		function initScroll(elementId){
+			destination=document.getElementById(elementId).offsetTop;
+			//console.log(destination);
+			scroller=setTimeout(function(){
+				initScroll(elementId);
+			},1);
+
+			marginY=marginY+speed;
+
+			if(marginY >=destination){
+				clearTimeout(scroller);
+			}
+
+			window.scroll(0,marginY);
+
+			window.onbeforeunload = function () {
+			  window.scrollTo(0, 0);
+			}
+		}
+
+		function openForm(elementId){
+
+			if(elementId=="login-frm"){
+				document.getElementById("Sign-frm").style.display="none";
+				document.getElementById(elementId).style.display="block";
+
+			}
+			else if(elementId=="Sign-frm"){
+				document.getElementById("login-frm").style.display="none";
+				document.getElementById(elementId).style.display="block";
+
+			}
+
+			
+		}
+
+		function closeNav(elementId){
+			document.getElementById(elementId).style.display="none";
+		}
+
+		function next(elementId){
+			var fname=document.forms["signForm"]["fullname"].value;
+			var uname=document.forms["signForm"]["username"].value;
+			var upass=document.forms["signForm"]["password"].value;
+			var cpass=document.forms["signForm"]["confirmPassword"].value;
+
+			if(fname==""){
+				alert("Please Insert Your Fullname");
+				document.forms["signForm"]["fullname"].style.border="3px solid red";
+			}
+
+			else if(uname==""){
+				alert("Please Insert An Username");
+				document.forms["signForm"]["fullname"].style.border="3px solid #555";
+				document.forms["signForm"]["username"].style.border="3px solid red";
+			}
+			
+			else if (upass!=cpass) {
+				alert("Password And Confirm Password Didn't Match");
+				document.forms["signForm"]["confirmPassword"].value="";
+				document.forms["signForm"]["username"].style.border="3px solid #555";
+				document.forms["signForm"]["confirmPassword"].style.border="3px solid red";
+
+				
+			}
+
+
+			else{
+
+				var types="firstSign";
+
+				xhttp.onreadystatechange = function() {
+	   				 if (this.readyState == 4 && this.status == 200) {
+	      				/*document.getElementById("txtHint").innerHTML = this.responseText;*/
+	      				document.getElementById("hdn").value=this.responseText;
+	      				var txt = document.getElementById("hdn").value;
+
+
+	      				if(txt.trim() == "User Already Exists"){
+	      					alert(txt.trim());
+	      					document.forms["signForm"]["confirmPassword"].value="";
+	      					document.forms["signForm"]["username"].value="";
+	      					document.forms["signForm"]["password"].value="";
+	      					document.forms["signForm"]["confirmPassword"].style.border="3px solid #555";
+	      					document.forms["signForm"]["username"].style.border="3px solid red";
+	      					document.forms["signForm"]["password"].style.border="3px solid red";
+	      				}
+
+
+	      				else if(txt.trim() == "Successfully insert"){
+	      					document.forms["signForm"]["username"].style.border="3px solid #555";
+	      					document.forms["signForm"]["password"].style.border="3px solid #555";
+	      					document.getElementById(elementId).style.display="none";
+	      					document.getElementById("sf").style.display="block";
+	      				}
+
+	    			}
+	  			};
+
+	  			xhttp.open("POST", "../php/register.php?ups="+ upass + "&unm=" + uname + "&tp=" + types + "&fnm=" + fname , true);
+	  			xhttp.send();
+
+			}
+		}
+
+		function Previous(elementId){
+			document.getElementById(elementId).style.display="none";
+			document.getElementById("ff").style.display="block";
+		}
+
+
+		function signuUp(){
+			var types="secondSign";
+
+			var upass=document.forms["signForm"]["password"].value;
+			var uname=document.forms["signForm"]["username"].value;
+			var mail=document.forms["signForm"]["email"].value;
+			var home=document.forms["signForm"]["hometown"].value;
+			var bday=document.forms["signForm"]["bday"].value;
+			var gndr=document.forms["signForm"]["gender"].value;
+
+			xhttp.onreadystatechange = function() {
+	   				 if (this.readyState == 4 && this.status == 200) {
+	      				/*document.getElementById("txtHint").innerHTML = this.responseText;*/
+	      				document.getElementById("hdn").value=this.responseText;
+	      				var txt = document.getElementById("hdn").value;
+
+
+	      				if(txt.trim() == "User Created"){
+	      					window.location.replace("../html/Homepage2.php");
+	      				}
+
+	      				else{
+	      					alert(txt.trim());
+	      				}
+
+
+	      				
+
+	    			}
+	  			};
+
+	  			xhttp.open("POST", "../php/register.php?ups="+ upass + "&mail=" + mail + "&tp=" + types + "&home=" + home + "&bday=" + bday +"&gndr=" + gndr + "&unm=" + uname , true);
+	  			xhttp.send();
+
+		}
+
+		function login(){
+			var upass=document.forms["loginForm"]["password"].value;
+			var uname=document.forms["loginForm"]["username"].value;
+
+			xhttp.onreadystatechange = function() {
+	   				 if (this.readyState == 4 && this.status == 200) {
+	      				/*document.getElementById("txtHint").innerHTML = this.responseText;*/
+	      				document.getElementById("hdn").value=this.responseText;
+	      				var txt = document.getElementById("hdn").value;
+
+
+	      				if(txt.trim() == "Go To Homepage"){
+	      					window.location.replace("../html/Homepage2.php");
+	      					
+	      				}
+
+
+	      				else if(txt.trim() == "User Doesn't Exists"){
+	      					alert(txt.trim());
+	      					document.forms["loginForm"]["password"].value="";
+	      					document.forms["loginForm"]["username"].value="";
+	      					document.forms["loginForm"]["password"].style.border="3px solid red";
+	      					document.forms["loginForm"]["username"].style.border="3px solid red";
+	      				}
+
+	      				else{
+	      					alert("something went Wrong");
+	      				}
+
+	    			}
+	  			};
+
+	  			xhttp.open("POST", "../php/login.php?ups="+ upass + "&unm=" + uname , true);
+	  			xhttp.send();
+		}
+
+
+		function go(){
+			window.location.replace("../html/admin.php");
+		}
+		
+	</script>
+
+</body>
+</html>
